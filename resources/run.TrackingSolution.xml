@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="LINK - Tracking Solution">
+	<listeners>
+		<listener class-name="common.MethodListener" />
+		<listener class-name="reportConfig.ExtentTestListener" />
+	</listeners>
+	<parameter name="environment" value="staging" />
+	<test name="Run LINK Test On Chrome Browser" preserve-order="true" enabled="true">
+		<classes>
+			<parameter name="browser" value="chrome" />
+			<class name="link.TransportRequest.TransportRequest_Search" />
+			<class name="link.TransportRequest.TransportRequest_Creation_01" />
+			<class name="link.TransportRequest.TransportRequest_Creation_02" />
+		</classes>
+	</test>
+</suite>
